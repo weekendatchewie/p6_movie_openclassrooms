@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CinemaTix</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+
+<div class="navbar">
+    <h1 class="navbar-title">Cinema<span style="color: #ffc107;">T</span>ix</h1>
+</div>
+
+<div class="container">
+
+    <section class="section-main-movie">
+        <div class="bloc-main-movie">
+            <img class="main-movie-img" src="./assets/godfather.jpeg" alt="godfather-picture">
+            <div class="card-content-main-movie">
+                <div class="bloc-resume-main-movie">
+                    <p class="resume-main-movie" id="resume-main-movie">"The aging patriarch of an organized crime
+                        dynasty transfers control of his clandestine empire to his reluctant son."</p>
+                </div>
+                <h2 class="title-main-movie" id="title-main-movie">TITRE</h2>
+                <div class="bloc-btn-main-movie">
+                    <button class="btn-main-movie">Lecture</button>
+                    <button class="btn-main-movie" id="btn-info-main-movie">Plus d'infos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL MAIN MOVIE -->
+        <div id="modal-main-movie" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="btn-close-modal-main-movie">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-top">
+                        <img class="modal-img" id="img-main-movie" src="#" alt="movie picture">
+                        <div class="modal-body-top-infos">
+                            <p class="modal-body-top-infos-paragraph" id="modal-genres-main-movie">Genre(s) : </p>
+                            <p class="modal-body-top-infos-paragraph" id="modal-rated-main-movie">Rated : </p>
+                            <p class="modal-body-top-infos-paragraph" id="modal-imdb-main-movie">IMDB score : </p>
+                            <p class="modal-body-top-infos-paragraph" id="modal-countries-main-movie">Pays : </p>
+                            <p class="modal-body-top-infos-paragraph" id="modal-box-office-main-movie">
+                                Box Office mondial :
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-bloc-info-movie">
+                        <h2 class="modal-title-movie" id="modal-title-main-movie">TITRE</h2>
+                        <div class="modal-bloc-main-info-movie">
+                            <div class="modal-main-bloc-year-synopsis-movie">
+                                <div class="modal-bloc-year-movie">
+                                    <p class="modal-year-movie" id="modal-year-main-movie"></p>
+                                    <p class="modal-duration-movie" id="modal-duration-main-movie"></p>
+                                </div>
+                                <div>
+                                    <p class="modal-resume-movie" id="modal-resume-main-movie"></p>
+                                </div>
+                            </div>
+                            <div class="modal-bloc-distrib-movie">
+                                <p class="modal-director-movie" id="modal-director-main-movie">Réalisateur(s) : </p>
+                                <p>Distribution : <span id="modal-actors-main-movie"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="categories" id="categories">
+
+        <div class="bloc-category">
+            <h2 class="title-category">Film mieux notés</h2>
+            <div class="carousel">
+                <div class="carousel-wrapper" id="wrapper-best-score-movies">
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc-category">
+            <h2 class="title-category">Marvel Cinematic Universe</h2>
+            <div class="carousel">
+                <div class="carousel-wrapper" id="wrapper-marvel-movies">
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc-category">
+            <h2 class="title-category">La guerre des étoiles</h2>
+            <div class="carousel">
+                <div class="carousel-wrapper" id="wrapper-starwars-movies">
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc-category">
+            <h2 class="title-category">Oeuvres de Tarantino</h2>
+            <div class="carousel">
+                <div class="carousel-wrapper" id="wrapper-tarantino-movies">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="modal-category">
+        <div id="modal-movie" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="btn-close-modal-movie">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-top">
+                        <img class="modal-img" id="img-movie" src="#" alt="movie picture">
+                        <div class="modal-body-top-infos">
+                            <p class="modal-body-top-infos-paragraph">Genre(s) : <span id="modal-genres-movie"></span></p>
+                            <p class="modal-body-top-infos-paragraph">Rated : <span id="modal-rated-movie"></span></p>
+                            <p class="modal-body-top-infos-paragraph">IMDB score : <span id="modal-imdb-movie"></span></p>
+                            <p class="modal-body-top-infos-paragraph">Pays : <span id="modal-countries-movie"></span></p>
+                            <p class="modal-body-top-infos-paragraph">
+                                Box Office mondial : <span id="modal-box-office-movie"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-bloc-info-movie">
+                        <h2 class="modal-title-movie" id="modal-title-movie">TITRE</h2>
+                        <div class="modal-bloc-main-info-movie">
+                            <div class="modal-main-bloc-year-synopsis-movie">
+                                <div class="modal-bloc-year-movie">
+                                    <p class="modal-year-movie" id="modal-year-movie"></p>
+                                    <p class="modal-duration-movie" id="modal-duration-movie"></p>
+                                </div>
+                                <div>
+                                    <p class="modal-resume-movie" id="modal-resume-movie"></p>
+                                </div>
+                            </div>
+                            <div class="modal-bloc-distrib-movie">
+                                <p class="modal-director-movie">Réalisateur(s) : <span id="modal-director-movie"></span></p>
+                                <p>Distribution : <span id="modal-actors-movie"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="test">
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

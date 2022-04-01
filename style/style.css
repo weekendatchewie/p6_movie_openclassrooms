@@ -1,0 +1,338 @@
+* {
+    transition: transform 0.5s ease;
+}
+
+body {
+    background-color: #231D33;
+}
+
+.navbar {
+    display: flex;
+    height: 25px;
+    color: #fff;
+    padding: 30px 60px;
+    font-size: 40px;
+    align-items: center;
+}
+
+.section-main-movie {
+    margin-top: 2%;
+    padding: 0 60px;
+}
+
+.bloc-main-movie {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.bloc-main-movie:hover .main-movie-img {
+    transform: scale(1.1);
+}
+
+.bloc-main-movie:hover .bloc-resume-main-movie {
+    display: block;
+}
+
+.main-movie-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+.card-content-main-movie {
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    left: 80px;
+}
+
+.bloc-resume-main-movie {
+    width: 30%;
+    margin-bottom: 5%;
+    display: none;
+
+    -webkit-animation-name: animatebloc;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animatebloc;
+    animation-duration: 0.8s;
+}
+
+.resume-main-movie {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.title-main-movie {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 0 2px #0007;
+    font-weight: bold;
+}
+
+.bloc-btn-main-movie {
+    margin-top: 10px;
+}
+
+.btn-main-movie {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.btn-main-movie:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.75);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #212940;
+    margin: auto;
+    padding: 0;
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    min-height: 120vh;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #565656;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    margin: 15px auto 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-img {
+    border-radius: 15px;
+    width: 45%;
+    object-fit: fill;
+}
+
+.modal-body-top-infos {
+    padding: 1% 5%;
+}
+
+.modal-body-top-infos-paragraph {
+    margin: 10% 0;
+}
+
+.modal-bloc-info-movie {
+    padding: 10px 0;
+}
+
+.modal-title-movie {
+    font-size: 1.8em;
+    text-shadow: 1px 0 2px #0007;
+}
+
+.modal-bloc-main-info-movie {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-main-bloc-year-synopsis-movie {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.modal-resume-movie {
+    text-align: justify;
+}
+
+.modal-bloc-year-movie {
+    display: flex;
+    padding: 10px 0;
+}
+
+.modal-year-movie {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.modal-duration-movie {
+    font-size: 18px;
+}
+
+.modal-bloc-distrib-movie {
+    width: 35%;
+}
+
+.modal-director-movie {
+    padding: 10px 0;
+}
+
+.bloc-category {
+    margin-top: 20px;
+    padding: 20px 60px;
+}
+
+.title-category {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 1px 0 1px #0007;
+    padding-left: 4%;
+}
+
+.bloc-card-movie {
+    display: flex;
+}
+
+.card-movie {
+    width: 65%;
+    margin: 4% 0 4% 0;
+}
+
+.card-movie:hover{
+    transform: scale(1.1);
+}
+
+.bloc-card-movie-img {
+    width: 100%;
+    position: relative;
+    height: 250px;
+}
+
+.card-img-movie {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: drop-shadow(4px 4px 4px black);
+    border: 4px solid #00050c;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bloc-card-title-movie {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+}
+
+.card-title-movie {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+/* swiper carousel */
+.carousel {
+    padding: 1.5% 0;
+    overflow-x: scroll;
+}
+
+.carousel-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 275px;
+    padding: 0 2%;
+}
+
+.carousel-slide {
+    text-align: center;
+    font-size: 18px;
+    padding: 0 10% 0 2%;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    }
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    }
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+@-webkit-keyframes animatebloc {
+    from {
+        margin-bottom:30%;
+        opacity:0
+    }
+    to {
+        margin-bottom:5%;
+        opacity:1
+    }
+}
+
+@keyframes animatebloc {
+    from {
+        margin-bottom:30%;
+        opacity:0
+    }
+    to {
+        margin-bottom:5%;
+        opacity:1
+    }
+}
