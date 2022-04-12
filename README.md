@@ -5,6 +5,6 @@
 
 * Suivre les indications pour l'installation et l'exécution de l'API
 
-* Cloner ou télécharger le repo **p6_movie_openclassrooms**
+* Cloner ou télécharger le repo : https://github.com/weekendatchewie/p6_movie_openclassrooms
 
 * Ouvrir le fichier *index.html*
